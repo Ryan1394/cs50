@@ -1,28 +1,24 @@
 import random
-
-# --------- { level part } ---------
-while True:
-    n = int(input("level : "))
+while True: 
     try:
+        n = int(input("LeveL : "))
         if n > 0:
-            number = random.randint(1,n)
+            number = random.randint(0,n)
     except ValueError:
         continue
     else:
         break
-
-# --------- { Guess Part } ---------
 while True:
     try:
-        user_input = int(input("Guess : "))
+        guess = int(input("guess: "))
     except ValueError:
         continue
-    if user_input < number: # type: ignore
-        print("too small !!!")
+    if guess < number:
+        print("Too Small!")
         continue
-    if user_input > number: # type: ignore
-        print("too large !!!")
+    if guess > number:
+        print("Too Large!")
         continue
     else:
-        print("just right.")
+        print("Just Right ;)")
         break
